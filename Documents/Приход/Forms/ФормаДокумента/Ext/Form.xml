@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Кошелек" id="7">
+			<DataPath>Объект.Кошелек</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КошелекКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КошелекРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВидДохода" id="35">
+			<DataPath>Объект.ВидДохода</DataPath>
+			<ContextMenu name="ВидДоходаКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="ВидДоходаРасширеннаяПодсказка" id="37"/>
+		</InputField>
+		<InputField name="Сумма" id="10">
+			<DataPath>Объект.Сумма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СуммаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="Доходы" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>1/0:46cd9eb7-37f0-4bd1-9e21-ed8101ce1502</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДоходыКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ДоходыКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ДоходыРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="ДоходыСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>Доходы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоходыСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДоходыСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДоходыСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>Доходы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоходыСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ДоходыСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДоходыУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>Доходы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДоходыУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ДоходыУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДоходыНомерСтроки" id="26">
+					<DataPath>1/0:46cd9eb7-37f0-4bd1-9e21-ed8101ce1502/-2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоходыНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДоходыНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="ДоходыДоход" id="29">
+					<DataPath>1/0:46cd9eb7-37f0-4bd1-9e21-ed8101ce1502/0:b1a91188-a6ce-459e-a8a4-7e104c1f7ec0</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоходыДоходКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДоходыДоходРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ДоходыСумма" id="32">
+					<DataPath>1/0:46cd9eb7-37f0-4bd1-9e21-ed8101ce1502/0:1e562d58-335f-441f-b375-9444ee29c887</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДоходыСуммаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДоходыСуммаРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">ДоходыСуммаПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Приход</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>
