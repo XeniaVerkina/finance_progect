@@ -250,10 +250,14 @@
 			<DocumentJournal>ЖурналОпераций</DocumentJournal>
 			<Enum>ПорядокПогашенияКредита</Enum>
 			<Enum>ПериодичностьПогашенияКредита</Enum>
-			<Report>Приход</Report>
 			<Report>Расход</Report>
+			<Report>Приход</Report>
+			<Report>Переводы</Report>
+			<Report>КатегорииТрат</Report>
 			<AccumulationRegister>Приход</AccumulationRegister>
 			<AccumulationRegister>Расход</AccumulationRegister>
+			<AccumulationRegister>Деньги</AccumulationRegister>
+			<AccumulationRegister>КатегорииТратРег</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

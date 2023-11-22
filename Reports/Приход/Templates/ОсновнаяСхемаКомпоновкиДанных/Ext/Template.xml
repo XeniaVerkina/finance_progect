@@ -7,18 +7,15 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Дата</dataPath>
-			<field>Дата</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Кошелек</dataPath>
 			<field>Кошелек</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОборот</dataPath>
+			<field>СуммаОборот</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ВидДохода</dataPath>
@@ -28,21 +25,24 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаПриход</dataPath>
-			<field>СуммаПриход</field>
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ПриходОбороты.Дата КАК Дата,
 	ПриходОбороты.ВидДохода КАК ВидДохода,
-	ПриходОбороты.СуммаПриход КАК СуммаПриход,
-	ПриходОбороты.Кошелек КАК Кошелек
+	ПриходОбороты.Кошелек КАК Кошелек,
+	ПриходОбороты.СуммаОборот КАК СуммаОборот
 ИЗ
 	РегистрНакопления.Приход.Обороты КАК ПриходОбороты</query>
 	</dataSet>
 	<totalField>
-		<dataPath>СуммаПриход</dataPath>
-		<expression>Сумма(СуммаПриход)</expression>
+		<dataPath>СуммаОборот</dataPath>
+		<expression>Сумма(СуммаОборот)</expression>
 	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
@@ -93,9 +93,25 @@
 					<dcsset:field>ВидДохода</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаПриход</dcsset:field>
+					<dcsset:field>СуммаОборот</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>69cbf0f5-17e6-4c4e-8841-6c7881a468df</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>84618406-64f7-499a-b35f-3a1ac564059a</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>СуммаПриход</dcsset:field>
