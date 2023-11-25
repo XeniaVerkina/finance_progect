@@ -3,7 +3,7 @@
 	<WorkingAreaTemplate>TwoColumnsEqualWidth</WorkingAreaTemplate>
 	<LeftColumn>
 		<Item>
-			<Form>Report.КатегорииТрат.Form.ФормаОтчета</Form>
+			<Form>DocumentJournal.ЖурналОпераций.Form.ФормаСписка</Form>
 			<Height>10</Height>
 			<Visibility>
 				<xr:Common>true</xr:Common>
@@ -12,7 +12,7 @@
 	</LeftColumn>
 	<RightColumn>
 		<Item>
-			<Form>Report.Расход.Form.ФормаОтчета</Form>
+			<Form>Report.КатегорииТрат.Form.ФормаОтчета</Form>
 			<Height>10</Height>
 			<Visibility>
 				<xr:Common>true</xr:Common>

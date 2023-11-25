@@ -40,9 +40,9 @@
 			<DefaultItem>true</DefaultItem>
 			<TitleLocation>None</TitleLocation>
 			<Width>35</Width>
-			<MaxWidth>35</MaxWidth>
-			<Height>35</Height>
-			<MaxHeight>35</MaxHeight>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>100</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="РезультатКонтекстноеМеню" id="6"/>
 			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="7"/>
 		</SpreadSheetDocumentField>
@@ -50,7 +50,7 @@
 	<Attributes>
 		<Attribute name="Отчет" id="1">
 			<Type>
-				<v8:Type>cfg:ReportObject.КатегорииТрат</v8:Type>
+				<v8:Type>cfg:ReportObject.Приход</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>

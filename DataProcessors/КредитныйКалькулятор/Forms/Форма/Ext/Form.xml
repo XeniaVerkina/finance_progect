@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="СуммаКредита" id="1">
+			<DataPath>Объект.СуммаКредита</DataPath>
+			<ContextMenu name="СуммаКредитаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СуммаКредитаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="СрокКредита" id="4">
+			<DataPath>Объект.СрокКредита</DataPath>
+			<ContextMenu name="СрокКредитаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СрокКредитаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ПроцентнаяСтавка" id="7">
+			<DataPath>Объект.ПроцентнаяСтавка</DataPath>
+			<ContextMenu name="ПроцентнаяСтавкаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПроцентнаяСтавкаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Button name="ФормаРассчитать" id="10">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Рассчитать</CommandName>
+			<ExtendedTooltip name="ФормаРассчитатьРасширеннаяПодсказка" id="11"/>
+		</Button>
+		<Table name="Результат" id="14">
+			<Width>60</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>60</MaxWidth>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Результат</DataPath>
+			<BackColor>#DAECFF</BackColor>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="15"/>
+			<AutoCommandBar name="РезультатКоманднаяПанель" id="16">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="17"/>
+			<SearchStringAddition name="РезультатСтрокаПоиска" id="18">
+				<AdditionSource>
+					<Item>Результат</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатСтрокаПоискаКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="РезультатСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатСостояниеПросмотра" id="21">
+				<AdditionSource>
+					<Item>Результат</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатСостояниеПросмотраКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="РезультатСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатУправлениеПоиском" id="24">
+				<AdditionSource>
+					<Item>Результат</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатУправлениеПоискомКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="РезультатУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="РезультатМесяц" id="30">
+					<DataPath>Объект.Результат.Месяц</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Результат.RowsCount</FooterDataPath>
+					<FooterText>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяцев:</v8:content>
+						</v8:item>
+					</FooterText>
+					<ContextMenu name="РезультатМесяцКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="РезультатМесяцРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="РезультатСуммаПлатежа" id="33">
+					<DataPath>Объект.Результат.СуммаПлатежа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Items.Результат.CurrentData.СуммаПлатежа</FooterDataPath>
+					<FooterText>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В месяц:</v8:content>
+						</v8:item>
+					</FooterText>
+					<ContextMenu name="РезультатСуммаПлатежаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="РезультатСуммаПлатежаРасширеннаяПодсказка" id="35"/>
+				</InputField>
+				<InputField name="РезультатОстатокЗадолженности" id="36">
+					<DataPath>Объект.Результат.ОстатокЗадолженности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.Результат[0].ОстатокЗадолженности</FooterDataPath>
+					<FooterText>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего:</v8:content>
+						</v8:item>
+					</FooterText>
+					<ContextMenu name="РезультатОстатокЗадолженностиКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="РезультатОстатокЗадолженностиРасширеннаяПодсказка" id="38"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.КредитныйКалькулятор</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Рассчитать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Рассчитать</Action>
+		</Command>
+	</Commands>
+</Form>

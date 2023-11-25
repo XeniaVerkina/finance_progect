@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
-	<Report uuid="c7cbcfad-325d-438d-8e6e-0e59adfee230">
+	<Report uuid="f2b166f9-c821-4bca-a988-196f2dd9e1b1">
 		<InternalInfo>
-			<xr:GeneratedType name="ReportObject.Приход" category="Object">
-				<xr:TypeId>b56b30fc-f40e-4fb2-ae34-7444ab2e5cf4</xr:TypeId>
-				<xr:ValueId>a3d95ca7-2523-4d9f-99c6-9a75d5b1a4fa</xr:ValueId>
+			<xr:GeneratedType name="ReportObject.Пожалуйста" category="Object">
+				<xr:TypeId>44f1b451-be96-4849-8c43-710cfcd20952</xr:TypeId>
+				<xr:ValueId>e383c3b7-4d30-48b9-b32e-80cad0b2fa88</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="ReportManager.Приход" category="Manager">
-				<xr:TypeId>f52abe94-3d5e-4357-ad67-657a9a41b0db</xr:TypeId>
-				<xr:ValueId>4e6b3a7d-8a91-4dd7-bbfc-c7755658d3a4</xr:ValueId>
+			<xr:GeneratedType name="ReportManager.Пожалуйста" category="Manager">
+				<xr:TypeId>57dd764c-30f3-4a0f-b44c-93dccf7848d2</xr:TypeId>
+				<xr:ValueId>bff25b93-be31-49a8-bd25-126cb8fc0b1f</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>Приход</Name>
+			<Name>Пожалуйста</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Приход</v8:content>
+					<v8:content>Пожалуйста</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
-			<DefaultForm>Report.Приход.Form.ФормаОтчета</DefaultForm>
+			<DefaultForm/>
 			<AuxiliaryForm/>
-			<MainDataCompositionSchema>Report.Приход.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
+			<MainDataCompositionSchema>Report.Пожалуйста.Template.ОсновнаяСхемаКомпоновкиДанных</MainDataCompositionSchema>
 			<DefaultSettingsForm/>
 			<AuxiliarySettingsForm/>
 			<DefaultVariantForm/>
@@ -34,7 +34,6 @@
 			<Explanation/>
 		</Properties>
 		<ChildObjects>
-			<Form>ФормаОтчета</Form>
 			<Template>ОсновнаяСхемаКомпоновкиДанных</Template>
 		</ChildObjects>
 	</Report>

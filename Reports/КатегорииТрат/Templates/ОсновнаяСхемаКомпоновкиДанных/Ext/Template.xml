@@ -367,7 +367,7 @@
 					<dcsset:appearance>
 						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 							<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
-							<dcscor:value xsi:type="v8ui:Color">#ED9EFF</dcscor:value>
+							<dcscor:value xsi:type="v8ui:Color">#B5FFEF</dcscor:value>
 						</dcscor:item>
 					</dcsset:appearance>
 				</dcsset:item>

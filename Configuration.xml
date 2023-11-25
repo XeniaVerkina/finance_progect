@@ -244,9 +244,11 @@
 			<Catalog>Покупки</Catalog>
 			<Catalog>КатегорииРасходов</Catalog>
 			<Catalog>Кредиты</Catalog>
+			<Catalog>Выписки</Catalog>
 			<Document>Приход</Document>
 			<Document>Переводы</Document>
 			<Document>Расход</Document>
+			<Document>ВыпискиИзБанков</Document>
 			<DocumentJournal>ЖурналОпераций</DocumentJournal>
 			<Enum>ПорядокПогашенияКредита</Enum>
 			<Enum>ПериодичностьПогашенияКредита</Enum>
@@ -254,10 +256,14 @@
 			<Report>Приход</Report>
 			<Report>Переводы</Report>
 			<Report>КатегорииТрат</Report>
+			<Report>Пожалуйста</Report>
+			<DataProcessor>КредитныйКалькулятор</DataProcessor>
+			<DataProcessor>БанковскаяВыписка</DataProcessor>
 			<AccumulationRegister>Приход</AccumulationRegister>
 			<AccumulationRegister>Расход</AccumulationRegister>
 			<AccumulationRegister>Деньги</AccumulationRegister>
 			<AccumulationRegister>КатегорииТратРег</AccumulationRegister>
+			<AccumulationRegister>ВыпискиИзБанков</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

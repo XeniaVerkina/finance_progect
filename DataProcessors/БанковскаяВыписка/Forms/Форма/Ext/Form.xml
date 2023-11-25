@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Выписка" id="1">
+			<DataPath>Объект.Выписка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ВыпискаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВыпискаРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="StartChoice">ВыпискаНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<RadioButtonField name="Банк" id="4">
+			<DataPath>Объект.Банк</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">Сбарбанк</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">Тинькофф</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">ВТБ</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="БанкКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="БанкРасширеннаяПодсказка" id="6"/>
+		</RadioButtonField>
+		<Table name="ДанныеФайла" id="7">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДанныеФайла</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеФайлаКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ДанныеФайлаКоманднаяПанель" id="9">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ФормаПрочитатьФайл" id="56">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПрочитатьФайл</CommandName>
+						<ExtendedTooltip name="ФормаПрочитатьФайлРасширеннаяПодсказка" id="57"/>
+					</Button>
+					<Button name="ДанныеФайлаЗаписатьДанные" id="58">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаписатьДанные</CommandName>
+						<ExtendedTooltip name="ДанныеФайлаЗаписатьДанныеРасширеннаяПодсказка" id="59"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДанныеФайлаРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ДанныеФайлаСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ДанныеФайла</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеФайлаСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДанныеФайлаСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеФайлаСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ДанныеФайла</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеФайлаСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДанныеФайлаСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеФайлаУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ДанныеФайла</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеФайлаУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДанныеФайлаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ДанныеФайлаТипКарты" id="20">
+					<DataPath>Объект.ДанныеФайла.ТипКарты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаТипКартыКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДанныеФайлаТипКартыРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДанныеФайлаНомерКарты" id="23">
+					<DataPath>Объект.ДанныеФайла.НомерКарты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаНомерКартыКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДанныеФайлаНомерКартыРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ДанныеФайлаДатаСовершенияОперации" id="26">
+					<DataPath>Объект.ДанныеФайла.ДатаСовершенияОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаДатаСовершенияОперацииКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДанныеФайлаДатаСовершенияОперацииРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ДанныеФайлаДатаОбработкиОперации" id="29">
+					<DataPath>Объект.ДанныеФайла.ДатаОбработкиОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаДатаОбработкиОперацииКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДанныеФайлаДатаОбработкиОперацииРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ДанныеФайлаКодАвторизации" id="32">
+					<DataPath>Объект.ДанныеФайла.КодАвторизации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаКодАвторизацииКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДанныеФайлаКодАвторизацииРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ДанныеФайлаТипОперации" id="35">
+					<DataPath>Объект.ДанныеФайла.ТипОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаТипОперацииКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДанныеФайлаТипОперацииРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ДанныеФайлаГородСовершения" id="38">
+					<DataPath>Объект.ДанныеФайла.ГородСовершения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаГородСовершенияКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДанныеФайлаГородСовершенияРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ДанныеФайлаСтранаСовершения" id="41">
+					<DataPath>Объект.ДанныеФайла.СтранаСовершения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаСтранаСовершенияКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДанныеФайлаСтранаСовершенияРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ДанныеФайлаОписание" id="44">
+					<DataPath>Объект.ДанныеФайла.Описание</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаОписаниеКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ДанныеФайлаОписаниеРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ДанныеФайлаВалютаОперации" id="47">
+					<DataPath>Объект.ДанныеФайла.ВалютаОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаВалютаОперацииКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ДанныеФайлаВалютаОперацииРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ДанныеФайлаСуммаВВалютеОперации" id="50">
+					<DataPath>Объект.ДанныеФайла.СуммаВВалютеОперации</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаСуммаВВалютеОперацииКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ДанныеФайлаСуммаВВалютеОперацииРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ДанныеФайлаСуммаВВалютеСчета" id="53">
+					<DataPath>Объект.ДанныеФайла.СуммаВВалютеСчета</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеФайлаСуммаВВалютеСчетаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ДанныеФайлаСуммаВВалютеСчетаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.БанковскаяВыписка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрочитатьФайл" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьФайл</Action>
+		</Command>
+		<Command name="ЗаписатьДанные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьДанные</Action>
+		</Command>
+	</Commands>
+</Form>
